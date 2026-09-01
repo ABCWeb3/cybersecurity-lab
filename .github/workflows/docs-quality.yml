@@ -30,7 +30,6 @@ jobs:
             --root-dir "$(pwd)"
             --verbose
             --no-progress
-            --exclude-mail
             './**/*.md'
           fail: true
           token: ${{ secrets.GITHUB_TOKEN }}
