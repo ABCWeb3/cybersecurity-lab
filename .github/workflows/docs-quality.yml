@@ -1,0 +1,36 @@
+name: Documentation quality
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-documentation:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7.0.1
+
+      - name: Lint Markdown
+        uses: DavidAnson/markdownlint-cli2-action@v24.2.0
+        with:
+          globs: "**/*.md"
+
+      - name: Check links
+        uses: lycheeverse/lychee-action@v2.9.0
+        with:
+          args: >-
+            --root-dir "$(pwd)"
+            --verbose
+            --no-progress
+            --exclude-mail
+            './**/*.md'
+          fail: true
+          token: ${{ secrets.GITHUB_TOKEN }}

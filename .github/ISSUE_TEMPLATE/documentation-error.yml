@@ -1,0 +1,36 @@
+name: خطأ في التوثيق
+description: الإبلاغ عن أمر غير صحيح أو شرح غامض أو رابط متعطل
+title: "docs: "
+labels:
+  - documentation
+body:
+  - type: markdown
+    attributes:
+      value: شكرًا لمساعدتك. لا ترفق بيانات حساسة أو ملفات التقاط حقيقية.
+  - type: input
+    id: file
+    attributes:
+      label: الملف أو القسم
+      placeholder: network-tests/01-arp-spoofing-mitm-lab.md
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: وصف المشكلة
+      description: اذكر الأمر أو النص والنتيجة التي ظهرت، بعد إخفاء العناوين والبيانات الحقيقية.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: التصحيح المقترح أو النتيجة المتوقعة
+    validations:
+      required: true
+  - type: checkboxes
+    id: authorization
+    attributes:
+      label: تأكيد النطاق
+      options:
+        - label: لم أرفق أسرارًا أو إحداثيات أو بيانات تعريف أو ملفات التقاط حقيقية.
+          required: true

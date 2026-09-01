@@ -1,0 +1,24 @@
+# Network captures
+*.pcap
+*.pcapng
+*.cap
+
+# Location and test outputs
+*.kml
+*.kmz
+*.csv
+*.log
+logs/
+db/
+
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+ngrok.yml
+
+# Local editor and operating-system files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

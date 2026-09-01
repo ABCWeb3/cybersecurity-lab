@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: بلاغ أمني حساس
+    url: https://github.com/ABCWeb3/cybersecurity-lab/security
+    about: لا تنشر أسرارًا أو بيانات شخصية في Issue عام؛ اقرأ SECURITY.md أولًا.
